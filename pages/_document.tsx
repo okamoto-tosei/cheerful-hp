@@ -7,6 +7,7 @@ class Document extends NextDocument<Props> {
     return (
       <Html lang="ja">
         <Head>
+          <title>cheerful - エステサロン -</title>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
