@@ -7,6 +7,7 @@ class Document extends NextDocument<Props> {
     return (
       <Html lang="ja">
         <Head>
+          <meta charSet="utf-8" />
           <title>cheerful - エステサロン -</title>
           <link
             rel="apple-touch-icon"
@@ -33,6 +34,36 @@ class Document extends NextDocument<Props> {
           />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff"></meta>
+
+          {/* seo */}
+          <meta
+            content="奈良県橿原市今井町にあるエステサロンです。オーガニックのよもぎを使用した、よもぎ蒸しやボディーマッサージなどがおすすめ。水光注射など流行りのメニューなどもあり、お客様を内側からしっかりと美しくなれるようにいたします。近鉄八木西口駅から徒歩5分程度の距離にあり駐車場も完備していますので、お車での来店も可能です。"
+            name="description"
+          ></meta>
+          {/* ogp */}
+          <meta
+            property="og:title"
+            content="
+          エステサロン　ちあふる"
+          />
+          <meta
+            property="og:description"
+            content="奈良県橿原市今井町にあるエステサロンです。オーガニックのよもぎを使用した、よもぎ蒸しやボディーマッサージなどがおすすめ。水光注射など流行りのメニューなどもあり、お客様を内側からしっかりと美しくなれるようにいたします。近鉄八木西口駅から徒歩5分程度の距離にあり駐車場も完備していますので、お車での来店も可能です。"
+          />
+          <meta property="og:type" content="TOPページ" />
+          <meta
+            property="og:url"
+            content="https://main--bright-pika-2ead4c.netlify.app/#home"
+          />
+          <meta property="og:image" content="/gallery_3.jpg" />
+          <meta property="og:site_name" content="ちあふる" />
+          <meta property="og:locale" content="ja_JP" />
+
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <meta
+            name="keywords"
+            content="cheerful,ちあふる,エステサロン,奈良県,橿原市,今井町,奈良県橿原市今井町,よもぎ,蓬,水光注射"
+          ></meta>
         </Head>
         <body>
           <Main />
