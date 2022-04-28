@@ -5,7 +5,7 @@ export const HomeSection: NextPage = () => {
     <div className="home-bg">
       <section className="home" id="home">
         <div className="content">
-          <h3>Cheerful</h3>
+          <h3>ちあふる</h3>
           <p>
             近鉄八木西口駅より徒歩5分の距離にある美と健康を非日常的な癒やしの空間を体感していただけるエステサロンです。
             <br />
