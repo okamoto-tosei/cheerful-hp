@@ -55,7 +55,10 @@ class Document extends NextDocument<Props> {
             property="og:url"
             content="https://main--bright-pika-2ead4c.netlify.app/#home"
           />
-          <meta property="og:image" content="/gallery_3.jpg" />
+          <meta
+            property="og:image"
+            content="https://imgbp.hotp.jp/CSP/IMG_SRC_K/72/29/C025887229/C025887229_219-164.jpg"
+          />
           <meta property="og:site_name" content="ちあふる" />
           <meta property="og:locale" content="ja_JP" />
 
