@@ -51,6 +51,7 @@ export const ContactSection: NextPage = () => {
           noValidate
           name="contact"
           data-netlify="true"
+          data-netlify-recaptcha="true"
           onSubmit={handleSubmit(onSubmit)}
         >
           <h3>entry field</h3>
@@ -96,7 +97,7 @@ export const ContactSection: NextPage = () => {
           )}
 
           <input type="hidden" name="contact" value="contact" />
-
+          <div data-netlify-recaptcha="true"></div>
           <button className="btn" type="submit" name="send">
             送　信
           </button>
