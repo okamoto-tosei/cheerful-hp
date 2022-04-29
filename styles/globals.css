@@ -76,6 +76,10 @@ section {
   padding: 1rem 3rem;
 }
 
+.email {
+  text-transform: none;
+}
+
 .btn:hover {
   background-color: var(--black);
 }
@@ -220,7 +224,6 @@ section {
   width: 220px;
   height: 220px;
   object-fit: cover;
-  border: 3px solid #999;
 }
 
 .menu .box-container {
@@ -244,13 +247,17 @@ section {
   font-size: 1.5rem;
   color: var(--black);
 }
+.menu .box-container .box p {
+  line-height: 2;
+  font-size: 1.6rem;
+  color: var(--light-color);
+}
 
 .menu .box-container .box .mask {
   border-radius: 50%;
   width: 220px;
   height: 220px;
   object-fit: cover;
-  border: 3px solid #999;
 }
 
 .gallery .box-container {

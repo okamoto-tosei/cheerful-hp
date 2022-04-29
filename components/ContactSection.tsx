@@ -1,6 +1,40 @@
 import type { NextPage } from 'next';
+import { useForm } from 'react-hook-form';
 
 export const ContactSection: NextPage = () => {
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data: any) => {
+    //　　データの送信処理、form-nameをformのnameと合わせる。
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...data }),
+    })
+      .then(() => {
+        // 成功時の処理
+        alert('お問い合わせ内容を送信いたしました。');
+      })
+      .catch((error) => {
+        // 失敗時の処理
+        alert(
+          'お問い合わせ内容の送信に失敗しました。\nお手数ですが、しばらくお時間をあけてから再度お試し下さい。'
+        );
+      });
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="heading">
@@ -13,41 +47,55 @@ export const ContactSection: NextPage = () => {
           <img src="contact-img.svg" alt="" />
         </div>
 
-        <form>
-          <h3>book a table</h3>
+        <form
+          noValidate
+          name="contact"
+          data-netlify="true"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <h3>entry field</h3>
           <input
             type="text"
-            name="name"
-            required
+            {...register('name', { required: true })}
             className="box"
             maxLength={20}
             placeholder="お名前"
           />
+          {errors.name && errors.name.type === 'required' && (
+            <p style={{ color: 'red' }}>必須項目です。</p>
+          )}
           <input
             type="tel"
-            name="tel"
+            {...register('tel', { required: true })}
             className="box"
-            required
             maxLength={15}
             placeholder="お電話番号"
           />
+          {errors.tel && errors.tel.type === 'required' && (
+            <p style={{ color: 'red' }}>必須項目です。</p>
+          )}
           <input
             type="email"
-            name="email"
-            className="box"
-            required
-            maxLength={15}
+            {...register('email', { required: true })}
+            className="box email"
+            maxLength={30}
             placeholder="メールアドレス"
           />
+          {errors.email && errors.email.type === 'required' && (
+            <p style={{ color: 'red' }}>必須項目です。</p>
+          )}
 
           <textarea
-            name="contents"
             className="box"
-            required
-            maxLength={15}
-            placeholder=" 希望日時と時間、施術内容をお書きください。
-            &#10;（例：24日17時からフェイシャル希望）"
+            {...register('contents', { required: true })}
+            maxLength={80}
+            placeholder="お問い合わせ内容"
           />
+          {errors.contents && errors.contents.type === 'required' && (
+            <p style={{ color: 'red' }}>必須項目です。</p>
+          )}
+
+          <input type="hidden" name="contact" value="contact" />
 
           <button className="btn" type="submit" name="send">
             送　信
