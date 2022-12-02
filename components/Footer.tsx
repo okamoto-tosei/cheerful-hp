@@ -1,12 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEnvelope,
-  faPhone,
-  faClock,
-  faMapMarkerAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import type { NextPage } from 'next';
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhone, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import type { NextPage } from 'next'
+import React from 'react'
 
 export const Footer: NextPage = () => {
   return (
@@ -41,5 +36,5 @@ export const Footer: NextPage = () => {
         <div className="credit">&copy; coryright @2022 by cheerful</div>
       </footer>
     </section>
-  );
-};
+  )
+}

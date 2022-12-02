@@ -1,39 +1,35 @@
-import type { NextPage } from 'next';
-import { useForm } from 'react-hook-form';
+import type { NextPage } from 'next'
+import { useForm } from 'react-hook-form'
 
 export const ContactSection: NextPage = () => {
   const encode = (data: any) => {
     return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&');
-  };
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    formState: { errors }
+  } = useForm()
 
   const onSubmit = (data: any) => {
     //　　データの送信処理、form-nameをformのnameと合わせる。
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...data }),
+      body: encode({ 'form-name': 'contact', ...data })
     })
       .then(() => {
         // 成功時の処理
-        alert('お問い合わせ内容を送信いたしました。');
+        alert('お問い合わせ内容を送信いたしました。')
       })
       .catch((error) => {
         // 失敗時の処理
-        alert(
-          'お問い合わせ内容の送信に失敗しました。\nお手数ですが、しばらくお時間をあけてから再度お試し下さい。'
-        );
-      });
-  };
+        alert('お問い合わせ内容の送信に失敗しました。\nお手数ですが、しばらくお時間をあけてから再度お試し下さい。')
+      })
+  }
 
   return (
     <section className="contact" id="contact">
@@ -62,9 +58,7 @@ export const ContactSection: NextPage = () => {
             maxLength={20}
             placeholder="お名前"
           />
-          {errors.name && errors.name.type === 'required' && (
-            <p style={{ color: 'red' }}>必須項目です。</p>
-          )}
+          {errors.name && errors.name.type === 'required' && <p style={{ color: 'red' }}>必須項目です。</p>}
           <input
             type="tel"
             {...register('tel', { required: true })}
@@ -72,9 +66,7 @@ export const ContactSection: NextPage = () => {
             maxLength={15}
             placeholder="お電話番号"
           />
-          {errors.tel && errors.tel.type === 'required' && (
-            <p style={{ color: 'red' }}>必須項目です。</p>
-          )}
+          {errors.tel && errors.tel.type === 'required' && <p style={{ color: 'red' }}>必須項目です。</p>}
           <input
             type="email"
             {...register('email', { required: true })}
@@ -82,9 +74,7 @@ export const ContactSection: NextPage = () => {
             maxLength={30}
             placeholder="メールアドレス"
           />
-          {errors.email && errors.email.type === 'required' && (
-            <p style={{ color: 'red' }}>必須項目です。</p>
-          )}
+          {errors.email && errors.email.type === 'required' && <p style={{ color: 'red' }}>必須項目です。</p>}
 
           <textarea
             className="box"
@@ -92,9 +82,7 @@ export const ContactSection: NextPage = () => {
             maxLength={80}
             placeholder="お問い合わせ内容"
           />
-          {errors.contents && errors.contents.type === 'required' && (
-            <p style={{ color: 'red' }}>必須項目です。</p>
-          )}
+          {errors.contents && errors.contents.type === 'required' && <p style={{ color: 'red' }}>必須項目です。</p>}
 
           <input type="hidden" name="contact" value="contact" />
           <div data-netlify-recaptcha="true"></div>
@@ -104,5 +92,5 @@ export const ContactSection: NextPage = () => {
         </form>
       </div>
     </section>
-  );
-};
+  )
+}

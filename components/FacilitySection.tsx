@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 
 export const FacilitySection: NextPage = () => {
   return (
@@ -33,5 +33,5 @@ export const FacilitySection: NextPage = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 
 export const GallerySection: NextPage = () => {
   return (
@@ -17,5 +17,5 @@ export const GallerySection: NextPage = () => {
         <img src="gallery_6.jpg" alt="" />
       </div>
     </section>
-  );
-};
+  )
+}

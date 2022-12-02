@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 
 export const MenuSection: NextPage = () => {
   return (
@@ -52,5 +52,5 @@ export const MenuSection: NextPage = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

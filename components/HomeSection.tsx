@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 
 export const HomeSection: NextPage = () => {
   return (
@@ -17,5 +17,5 @@ export const HomeSection: NextPage = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
