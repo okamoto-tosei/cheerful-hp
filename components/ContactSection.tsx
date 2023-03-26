@@ -11,7 +11,8 @@ export const ContactSection: NextPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+    reset
   } = useForm()
 
   const onSubmit = (data: any) => {
@@ -24,6 +25,7 @@ export const ContactSection: NextPage = () => {
       .then(() => {
         // 成功時の処理
         alert('お問い合わせ内容を送信いたしました。')
+        reset()
       })
       .catch((error) => {
         // 失敗時の処理
