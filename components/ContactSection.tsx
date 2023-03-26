@@ -100,20 +100,6 @@ export const ContactSection: NextPage = () => {
           </button>
         </form>
       </div>
-
-      {/* form2 */}
-      <div>
-        <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="contact" value="contact" />
-
-          <p>
-            <label htmlFor="name">name</label>
-            <input type="text" id="name" name="name" />
-          </p>
-
-          <button type="submit">submit</button>
-        </form>
-      </div>
     </section>
   )
 }
