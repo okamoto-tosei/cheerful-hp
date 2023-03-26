@@ -7,7 +7,6 @@ import { MenuSection } from 'components/MenuSection'
 import { StaffSection } from 'components/StaffSection'
 import type { NextPage } from 'next'
 import React, { useEffect } from 'react'
-import { mailSubmit } from 'api/send_mail'
 
 const Home: NextPage = () => {
   return (
