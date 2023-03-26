@@ -50,7 +50,6 @@ export const ContactSection: NextPage = () => {
           noValidate
           name="contact"
           data-netlify="true"
-          data-netlify-recaptcha="true"
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -94,7 +93,6 @@ export const ContactSection: NextPage = () => {
           {errors.contents && errors.contents.type === 'required' && <p style={{ color: 'red' }}>必須項目です。</p>}
 
           <input type="hidden" name="contact" value="contact" />
-          <div data-netlify-recaptcha="true"></div>
           <button className="btn" type="submit" name="send">
             送　信
           </button>
