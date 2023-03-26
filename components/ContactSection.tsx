@@ -54,7 +54,7 @@ export const ContactSection: NextPage = () => {
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <p className="hidden">
+          <p hidden>
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
@@ -98,6 +98,20 @@ export const ContactSection: NextPage = () => {
           <button className="btn" type="submit" name="send">
             送　信
           </button>
+        </form>
+      </div>
+
+      {/* form2 */}
+      <div>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="contact" value="contact" />
+
+          <p>
+            <label htmlFor="name">name</label>
+            <input type="text" id="name" name="name" />
+          </p>
+
+          <button type="submit">submit</button>
         </form>
       </div>
     </section>
