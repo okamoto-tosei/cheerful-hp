@@ -125,7 +125,7 @@ section {
 }
 
 .home-bg {
-  background: linear-gradient(90deg, var(--white), transparent 70%),
+  background: linear-gradient(90deg, var(--white), transparent 60%),
     url(/IMG_2036.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -405,8 +405,12 @@ section {
   }
 
   .home-bg {
-    background-position: right;
+    background: linear-gradient(90deg, var(--white), transparent 0%),
+      url(/IMG_2036.jpg) no-repeat;
+    background-size: cover;
+    background-position: 57% 50%;
   }
+
   .home-bg .home {
     justify-content: center;
   }
