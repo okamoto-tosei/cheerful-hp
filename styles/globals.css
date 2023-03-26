@@ -444,3 +444,7 @@ section {
     font-size: 3rem;
   }
 }
+
+.hidden {
+  visibility: hidden;
+}

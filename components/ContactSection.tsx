@@ -16,6 +16,7 @@ export const ContactSection: NextPage = () => {
   } = useForm()
 
   const onSubmit = (data: any) => {
+    data['form-name'] = 'contact'
     //　　データの送信処理、form-nameをformのnameと合わせる。
     fetch('/', {
       method: 'POST',
@@ -50,8 +51,14 @@ export const ContactSection: NextPage = () => {
           name="contact"
           data-netlify="true"
           data-netlify-recaptcha="true"
+          netlify-honeypot="bot-field"
           onSubmit={handleSubmit(onSubmit)}
         >
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <h3>entry field</h3>
           <input
             type="text"
