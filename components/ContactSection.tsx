@@ -8,6 +8,7 @@ export const ContactSection: NextPage = () => {
       .join('&')
   }
   console.log('test')
+  console.log('test')
 
   const {
     register,
