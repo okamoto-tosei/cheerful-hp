@@ -7,6 +7,7 @@ export const ContactSection: NextPage = () => {
       .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
   }
+  console.log('test')
 
   const {
     register,
