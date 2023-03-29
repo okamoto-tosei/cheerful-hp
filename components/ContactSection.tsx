@@ -9,6 +9,9 @@ export const ContactSection: NextPage = () => {
   }
   console.log('test')
   console.log('test')
+  console.log('test')
+  console.log('test')
+  console.log('test')
 
   const {
     register,
