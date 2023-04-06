@@ -4,51 +4,51 @@ export const MenuSection: NextPage = () => {
   return (
     <section className="menu" id="menu">
       <div className="heading">
-        <img src="facility_main.jpg" alt="" />
+        <img src="facility_main.jpg" alt="popular menu" />
         <h3>popular menu</h3>
       </div>
 
       <div className="box-container">
         <div className="box">
-          <img className="mask" src="facility_2.jpg" alt="" />
+          <img className="mask" src="facility_2.jpg" alt="黄土よもぎ蒸し" />
           <h3>黄土よもぎ蒸し</h3>
-          <p>price: ¥3,000(+tax)</p>
+          <p>price: ¥3,850(税込)</p>
+          <p>time: 40分</p>
+        </div>
+
+        <div className="box">
+          <img className="mask" src="/noImage/noimg01.gif" alt="天使のゆるりヘッドマッサージ" />
+          <h3>天使のゆるりヘッドマッサージ</h3>
+          <p>price: ¥4,000(税込)</p>
+          <p>time: 20分</p>
+        </div>
+
+        <div className="box">
+          <img className="mask" src="menu_2.jpg" alt="毛穴ケア・フェイシャル" />
+          <h3>毛穴ケア・フェイシャル</h3>
+          <p>price: ¥12,800(税込)</p>
+          <p>time: 40分</p>
+        </div>
+
+        <div className="box">
+          <img className="mask" src="/noImage/noimg01.gif" alt="オールハンド・アロマリンパマッサージ" />
+          <h3>オールハンド・アロマリンパマッサージ</h3>
+          <p>price: ¥8,500(税込)</p>
           <p>time: 60分</p>
         </div>
 
         <div className="box">
-          <img className="mask" src="facility_2.jpg" alt="" />
-          <h3>ヘッドマッサージ</h3>
-          <p>price: ¥3,000(+tax)</p>
+          <img className="mask" src="/noImage/noimg01.gif" alt="水光エステ" />
+          <h3>水光エステ</h3>
+          <p>price: ¥22,000(税込)</p>
           <p>time: 60分</p>
         </div>
 
         <div className="box">
-          <img className="mask" src="menu_2.jpg" alt="" />
-          <h3>フェイシャル</h3>
-          <p>price: ¥3,000(+tax)</p>
-          <p>time: 60分</p>
-        </div>
-
-        <div className="box">
-          <img className="mask" src="menu_2.jpg" alt="" />
-          <h3>ハンドマッサージ</h3>
-          <p>price: ¥3,000(+tax)</p>
-          <p>time: 60分</p>
-        </div>
-
-        <div className="box">
-          <img className="mask" src="menu_2.jpg" alt="" />
-          <h3>水光注射</h3>
-          <p>price: ¥3,000(+tax)</p>
-          <p>time: 60分</p>
-        </div>
-
-        <div className="box">
-          <img className="mask" src="menu_2.jpg" alt="" />
-          <h3>リフレクソロジー</h3>
-          <p>price: ¥3,000(+tax)</p>
-          <p>time: 60分</p>
+          <img className="mask" src="/noImage/noimg01.gif" alt="足裏・リフレクソロジー" />
+          <h3>足裏・リフレクソロジー</h3>
+          <p>price: ¥4,000(税込)</p>
+          <p>time: 20分</p>
         </div>
       </div>
     </section>

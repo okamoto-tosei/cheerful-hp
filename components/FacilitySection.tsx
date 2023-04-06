@@ -17,7 +17,6 @@ export const FacilitySection: NextPage = () => {
             <br />
             よもぎの香りに癒されながら気持ちの良い汗をかいてスッキリします。
             <br />
-            <br />
             (冷え性改善・妊活・温活・ダイエット・更年期・肩こり解消に)身体の芯からポカポカに♪
           </p>
         </div>
@@ -31,12 +30,17 @@ export const FacilitySection: NextPage = () => {
         <div className="box">
           <img className="mask" src="menu_2.jpg" alt="" />
           <h3>フェイシャルエステ</h3>
-          <p>お客様のお肌悩みや<br/>お肌の状態に合わせて各コースご用意いたしております。<br/></p>
+          <p>
+            お客様のお肌悩みや
+            <br />
+            お肌の状態に合わせて各コースご用意いたしております。
+            <br />
+          </p>
         </div>
         <div className="box">
           <img className="mask" src="facility_4.jpg" alt="" />
           <h3>落ち着く雰囲気のルーム</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem</p>
+          <p>木の香りに包まれた癒しの空間であなただけの贅沢なひとときを。</p>
         </div>
       </div>
     </section>
