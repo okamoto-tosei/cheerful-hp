@@ -17,14 +17,15 @@ export const Footer: NextPage = () => {
           <div className="box">
             <FontAwesomeIcon className="img i" icon={faPhone} />
             <h3>our number</h3>
-            <p>000-0000-0000</p>
+            <p>090-5361-0541</p>
           </div>
 
           <div className="box">
             <FontAwesomeIcon className="img i" icon={faMapMarkerAlt} />
             <h3>business hours</h3>
-            <p>open: 9:00am</p>
-            <p>close: 18:00pm</p>
+            <p>開店: 10:00am</p>
+            <p>閉店: 21:00pm</p>
+            <p>定休日: 月曜日</p>
           </div>
 
           <div className="box">
