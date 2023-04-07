@@ -62,12 +62,11 @@ export type Props = {
 }
 
 const Home: NextPage<Props> = ({ menus, footers, blogs }) => {
-  console.log(blogs)
   return (
     <article>
       <HomeSection />
       <AboutSection />
-      <BlogContents contents={blogs.contents} />
+      {blogs.contents.length > 0 ? <BlogContents contents={blogs.contents} /> : null}
       <FacilitySection />
       <MenuSection menus={menus} />
       <GallerySection />
