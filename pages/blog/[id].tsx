@@ -5,6 +5,8 @@ import { client } from 'microCMS'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { Props } from 'pages/index'
 import { timeFormat } from 'utils/time'
+import sanitize from 'sanitize-html'
+
 type BlogProps = {
   category: {
     createdAt: Date
@@ -30,13 +32,14 @@ type BlogProps = {
 const Blog: NextPage<{ blog: BlogProps } & Props> = ({ blog, footers }) => {
   const date = dayjs(blog.createdAt)
   const createTime = timeFormat.YYYY_MM_DD(date)
+  const sanitizedHTML = sanitize(blog.content)
   return (
     <article className="blog_page">
       <section>
         <h1 className="blog_title">{blog.title}</h1>
         <p className="create_time">作成日:&emsp;{createTime}</p>
         <div>
-          <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
+          <div dangerouslySetInnerHTML={{ __html: sanitizedHTML }}></div>
         </div>
       </section>
       <Footer footers={footers} />
