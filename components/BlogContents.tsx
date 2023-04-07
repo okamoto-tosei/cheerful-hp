@@ -13,7 +13,7 @@ export const BlogContents: FC<Props> = ({ contents }) => {
     <section className="blog" id="blog">
       <div className="content">
         <div className="heading">
-          <img src="facility_main.jpg" alt="" />
+          <img src="/common/feather.webp" alt="" />
           <h3>Blog</h3>
         </div>
         <div className="blog-container">

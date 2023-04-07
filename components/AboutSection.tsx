@@ -4,7 +4,7 @@ export const AboutSection: NextPage = () => {
   return (
     <section className="about" id="about">
       <div className="image">
-        <img src="about.jpg" alt="エステの瀬術をしている画像" />
+        <img src="/about/about.webp" alt="エステの瀬術をしている画像" />
       </div>
 
       <div className="content">

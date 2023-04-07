@@ -10,7 +10,7 @@ export const MenuSection: NextPage<Props> = ({ menus }) => {
   return (
     <section className="menu" id="menu">
       <div className="heading">
-        <img src="facility_main.jpg" alt="popular menu" />
+        <img src="/common/feather.webp" alt="popular menu" />
         <h3>popular menu</h3>
       </div>
 
@@ -19,7 +19,7 @@ export const MenuSection: NextPage<Props> = ({ menus }) => {
           <div key={menu.id} className="box">
             <img
               className="mask"
-              src={menu.is_img ? `/menu/${menu.img_key}menu.jpg` : '/noImage/noimg01.gif'}
+              src={menu.is_img ? `/menu/${menu.img_key}menu.webp` : '/noImage/noimg01.gif'}
               alt={menu.name}
             />
             <h3>{menu.name}</h3>
