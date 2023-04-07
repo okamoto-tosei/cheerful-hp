@@ -5,10 +5,12 @@ import { GallerySection } from 'components/GallerlySection'
 import { HomeSection } from 'components/HomeSection'
 import { MenuSection } from 'components/MenuSection'
 import { StaffSection } from 'components/StaffSection'
-import type { NextPage } from 'next'
-import React from 'react'
+import type { GetStaticProps, NextPage } from 'next'
+import React, { Key } from 'react'
 import { supabase } from 'lib/supabase'
 import { Footer } from 'components/Footer'
+import { client } from 'microCMS'
+import { BlogContents } from 'components/BlogContents'
 
 export type Props = {
   menus: {
@@ -30,13 +32,42 @@ export type Props = {
     post_number: string
     address: string
   }[]
+  blogs: {
+    contents: {
+      category: {
+        createdAt: Date
+        id: string
+        name: string
+        publishedAt: Date
+        revisedAt: Date
+        updatedAt: Date
+      }
+      content: string
+      createdAt: string
+      eyecatch: {
+        height: number
+        url: string
+        width: number
+      }
+      id: Key
+      publishedAt: Date
+      revisedAt: Date
+      title: string
+      updatedAt: Date
+    }[]
+    limit: number
+    offset: number
+    totalCount: number
+  }
 }
 
-const Home: NextPage<Props> = ({ menus, footers }) => {
+const Home: NextPage<Props> = ({ menus, footers, blogs }) => {
+  console.log(blogs)
   return (
     <article>
       <HomeSection />
       <AboutSection />
+      <BlogContents contents={blogs.contents} />
       <FacilitySection />
       <MenuSection menus={menus} />
       <GallerySection />
@@ -49,14 +80,19 @@ const Home: NextPage<Props> = ({ menus, footers }) => {
 
 export default Home
 
-export async function getStaticProps() {
-  let { data: menus } = await supabase.from('menu').select('*')
-  let { data: footers } = await supabase.from('footer').select('*')
+export const getStaticProps: GetStaticProps = async () => {
+  // NOTE: supabase Data取得
+  const { data: menus } = await supabase.from('menu').select('*')
+  const { data: footers } = await supabase.from('footer').select('*')
+
+  // microCMSのブログデータ取得 (5件取得)
+  const blogs = await client.get({ endpoint: 'blogs', queries: { limit: 5, orders: 'publishedAt' } }).then((res) => res)
 
   return {
     props: {
       menus,
-      footers
+      footers,
+      blogs
     }
   }
 }
