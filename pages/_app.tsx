@@ -3,6 +3,10 @@ import type { AppProps } from 'next/app'
 import React from 'react'
 import { Header } from 'components/Header'
 import Head from 'next/head'
+import dayjs from 'dayjs'
+import 'dayjs/locale/ja'
+
+dayjs.locale('ja')
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

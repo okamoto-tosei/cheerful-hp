@@ -2,9 +2,19 @@ import type { NextPage } from 'next'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLeaf, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export const Header: NextPage = () => {
   const [toggle, setToggle] = useState(false)
+  const router = useRouter()
+
+  const isBlogPage = (path: string) => {
+    if (router.pathname === '/blog/[id]') {
+      return `/${path}`
+    }
+    return path
+  }
 
   return (
     <header className="header">
@@ -14,24 +24,24 @@ export const Header: NextPage = () => {
         </a>
 
         <nav className={`navbar ${toggle ? 'active' : ''}`}>
-          <a onClick={() => setToggle((prevState) => !prevState)} href="#home">
-            Home
-          </a>
-          <a onClick={() => setToggle((prevState) => !prevState)} href="#about">
-            About
-          </a>
-          <a onClick={() => setToggle((prevState) => !prevState)} href="#menu">
-            Menu
-          </a>
-          <a onClick={() => setToggle((prevState) => !prevState)} href="#gallery">
-            Gallery
-          </a>
-          <a onClick={() => setToggle((prevState) => !prevState)} href="#staff">
-            Staff
-          </a>
-          <a onClick={() => setToggle((prevState) => !prevState)} href="#contact">
-            Contact
-          </a>
+          <Link href={isBlogPage('#home')} passHref>
+            <a onClick={() => setToggle((prevState) => !prevState)}>Home</a>
+          </Link>
+          <Link href={isBlogPage('#about')} passHref>
+            <a onClick={() => setToggle((prevState) => !prevState)}>About</a>
+          </Link>
+          <Link href={isBlogPage('#menu')} passHref>
+            <a onClick={() => setToggle((prevState) => !prevState)}>Menu</a>
+          </Link>
+          <Link href={isBlogPage('#gallery')} passHref>
+            <a onClick={() => setToggle((prevState) => !prevState)}>Gallery</a>
+          </Link>
+          <Link href={isBlogPage('#staff')} passHref>
+            <a onClick={() => setToggle((prevState) => !prevState)}>Staff</a>
+          </Link>
+          <Link href={isBlogPage('#contact')}>
+            <a onClick={() => setToggle((prevState) => !prevState)}>Contact</a>
+          </Link>
         </nav>
 
         <div id="menu-btn" onClick={() => setToggle((prevState) => !prevState)}>
