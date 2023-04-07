@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build-export": "next build && next export -o ./dist",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,6 +13,11 @@
     "format": "prettier --write '**/*.tsx'"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@supabase/supabase-js": "^2.14.0",
     "bootstrap": "^5.2.3",
     "firebase": "^9.18.0",
     "microcms-js-sdk": "^2.3.0",
@@ -24,16 +30,13 @@
     "sendmail": "^1.6.1"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
     "@types/node": "17.0.29",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.0",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "prettier": "^2.7.1",
+    "serve": "^14.2.0",
     "typescript": "4.6.3"
   }
 }
