@@ -37,13 +37,13 @@ export const ContactSection: NextPage = () => {
   return (
     <section className="contact" id="contact">
       <div className="heading">
-        <img src="facility_main.jpg" alt="" />
+        <img src="/common/feather.webp" alt="" />
         <h3>contact us</h3>
       </div>
 
       <div className="row">
         <div className="image">
-          <img src="contact-img.svg" alt="" />
+          <img src="/contact/contact-img.svg" alt="" />
         </div>
 
         <form
