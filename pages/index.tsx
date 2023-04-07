@@ -92,6 +92,7 @@ export const getStaticProps: GetStaticProps = async () => {
       menus,
       footers,
       blogs
-    }
+    },
+    revalidate: 3000
   }
 }
