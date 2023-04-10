@@ -5,7 +5,7 @@ import { GallerySection } from 'components/GallerlySection'
 import { HomeSection } from 'components/HomeSection'
 import { MenuSection } from 'components/MenuSection'
 import { StaffSection } from 'components/StaffSection'
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import React, { Key } from 'react'
 import { supabase } from 'lib/supabase'
 import { Footer } from 'components/Footer'
@@ -81,7 +81,7 @@ const Home: NextPage<Props> = ({ menus, footers, blogs }) => {
 
 export default Home
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   // NOTE: supabase Data取得
   const { data: menus } = await supabase.from('menu').select('*')
   const { data: footers } = await supabase.from('footer').select('*')
@@ -94,7 +94,6 @@ export const getStaticProps: GetStaticProps = async () => {
       menus,
       footers,
       blogs
-    },
-    revalidate: 3000
+    }
   }
 }
