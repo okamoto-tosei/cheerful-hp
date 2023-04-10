@@ -11,6 +11,7 @@ import { supabase } from 'lib/supabase'
 import { Footer } from 'components/Footer'
 import { client } from 'microCMS'
 import { BlogContents } from 'components/BlogContents'
+import GoogleMap from 'components/GoogleMap'
 
 export type Props = {
   menus: {
@@ -72,6 +73,7 @@ const Home: NextPage<Props> = ({ menus, footers, blogs }) => {
       <GallerySection />
       <StaffSection />
       <ContactSection />
+      <GoogleMap />
       <Footer footers={footers} />
     </article>
   )
