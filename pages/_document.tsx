@@ -32,7 +32,7 @@ class Document extends NextDocument<Props> {
             content="奈良県橿原市今井町にあるエステサロンです。オーガニックのよもぎを使用した、よもぎ蒸しやボディーマッサージなどがおすすめ。水光注射など流行りのメニューなどもあり、お客様を内側からしっかりと美しくなれるようにいたします。近鉄八木西口駅から徒歩5分程度の距離にあり駐車場も完備していますので、お車での来店も可能です。"
           />
           <meta property="og:type" content="TOPページ" />
-          <meta property="og:url" content="https://main--bright-pika-2ead4c.netlify.app/#home" />
+          <meta property="og:url" content="https://cheerful-imai.com/" />
           <meta
             property="og:image"
             content="https://imgbp.hotp.jp/CSP/IMG_SRC_K/72/29/C025887229/C025887229_219-164.jpg"
