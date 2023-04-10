@@ -2,7 +2,7 @@ import { Footer } from 'components/Footer'
 import dayjs from 'dayjs'
 import { supabase } from 'lib/supabase'
 import { client } from 'microCMS'
-import type { GetServerSideProps, NextPage } from 'next'
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { Props } from 'pages/index'
 import { timeFormat } from 'utils/time'
 import sanitize from 'sanitize-html'
@@ -49,10 +49,29 @@ const Blog: NextPage<{ blog: BlogProps } & Props> = ({ blog, footers }) => {
 
 export default Blog
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const blog = await client.get({ endpoint: 'blogs', contentId: String(params?.id) }).then((res) => res)
   const { data: footers } = await supabase.from('footer').select('*')
   return {
     props: { blog, footers }
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { contents } = await client
+    .get<{ contents: { id: string }[] }>({
+      endpoint: 'blogs',
+      queries: { limit: 5, orders: 'publishedAt', fields: 'id' }
+    })
+    .then((res) => res)
+  const contentIds = contents.map((content) => {
+    return {
+      params: { id: content.id }
+    }
+  })
+
+  return {
+    paths: contentIds,
+    fallback: 'blocking'
   }
 }
