@@ -7,21 +7,28 @@ class Document extends NextDocument<Props> {
     return (
       <Html lang="ja">
         <Head>
-          <meta charSet="utf-8" />
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          {/* Favicon */}
           <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
           <link rel="manifest" href="/favicons/site.webmanifest" />
           <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="theme-color" content="#ffffff"></meta>
+          <meta name="theme-color" content="#ffffff" />
 
-          {/* seo */}
+          {/* SEO */}
           <meta
-            content="奈良県橿原市今井町にあるエステサロンです。オーガニックのよもぎを使用した、よもぎ蒸しやボディーマッサージなどがおすすめ。水光注射など流行りのメニューなどもあり、お客様を内側からしっかりと美しくなれるようにいたします。近鉄八木西口駅から徒歩5分程度の距離にあり駐車場も完備していますので、お車での来店も可能です。"
             name="description"
-          ></meta>
-          {/* ogp */}
+            content="奈良県橿原市今井町にあるエステサロンです。オーガニックのよもぎを使用した、よもぎ蒸しやボディーマッサージなどがおすすめ。水光注射など流行りのメニューなどもあり、お客様を内側からしっかりと美しくなれるようにいたします。近鉄八木西口駅から徒歩5分程度の距離にあり駐車場も完備していますので、お車での来店も可能です。"
+          />
+          <meta name="keywords" content="cheerful,ちあふる,エステサロン,奈良県,橿原市,今井町,よもぎ,蓬,水光注射" />
+          <meta name="author" content="ちあふる" />
+          <meta name="robots" content="index,follow" />
+
+          {/* OGP */}
           <meta
             property="og:title"
             content="
@@ -39,7 +46,7 @@ class Document extends NextDocument<Props> {
           />
           <meta property="og:site_name" content="ちあふる" />
           <meta property="og:locale" content="ja_JP" />
-
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta
             name="keywords"
