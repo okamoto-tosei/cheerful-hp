@@ -43,7 +43,7 @@ export const ContactSection: NextPage = () => {
 
       <div className="row">
         <div className="image">
-          <img src="/contact/contact-img.svg" alt="" />
+          <img src="/contact/contact-img.svg" alt="オフィスワークをしているイメージ画像" />
         </div>
 
         <form

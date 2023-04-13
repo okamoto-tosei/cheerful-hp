@@ -10,7 +10,7 @@ export const FacilitySection: NextPage = () => {
 
       <div className="box-container">
         <div className="box">
-          <img className="mask" src="/facility/facility_1.webp" alt="" />
+          <img className="mask" src="/facility/facility_1.webp" alt="よもぎ蒸しの施術" />
           <h3>黄土よもぎ蒸し</h3>
           <p>
             有機・無農薬栽培の奈良県産よもぎ使用。
@@ -21,14 +21,14 @@ export const FacilitySection: NextPage = () => {
           </p>
         </div>
         <div className="box">
-          <img className="mask" src="/facility/facility_2.webp" alt="" />
+          <img className="mask" src="/facility/facility_2.webp" alt="アロマリンパマッサージの施術" />
           <h3>アロマリンパマッサージ</h3>
           <p>
             お客様の体調にあわせたアロマをお選びし、リンパに沿ったオールハンドの温かいマッサージで日常の疲れたお体をゆっくりと癒してください。
           </p>
         </div>
         <div className="box">
-          <img className="mask" src="/facility/facility_3.webp" alt="" />
+          <img className="mask" src="/facility/facility_3.webp" alt="フェイシャルエステの施術" />
           <h3>フェイシャルエステ</h3>
           <p>
             お客様のお肌悩みや
@@ -38,7 +38,7 @@ export const FacilitySection: NextPage = () => {
           </p>
         </div>
         <div className="box">
-          <img className="mask" src="/facility/facility_4.webp" alt="" />
+          <img className="mask" src="/facility/facility_4.webp" alt="ちあふる店内の画像" />
           <h3>落ち着く雰囲気のルーム</h3>
           <p>木の香りに包まれた癒しの空間であなただけの贅沢なひとときを。</p>
         </div>
