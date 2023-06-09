@@ -1,14 +1,6 @@
 import type { NextPage } from 'next'
 
 export const MenuSection: NextPage = () => {
-  console.log('aaa')
-  console.log('aaa')
-  console.log('aaa')
-  console.log('aaa')
-  console.log('aaa')
-  console.log('aaa')
-  console.log('aaa')
-  console.log('aaa')
   return (
     <section className="menu" id="menu">
       <div className="heading">
