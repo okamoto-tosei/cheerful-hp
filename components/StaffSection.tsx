@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 
 export const StaffSection: NextPage = () => {
+  console.log('aaa')
   return (
     <section className="staff" id="staff">
       <div className="heading">
